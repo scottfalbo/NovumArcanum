@@ -2,3 +2,9 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// -------------------------------------*/
 
+@import url(structure/ingressus.css);
+@import url(structure/portal.css);
+@import url(structure/praxisvitae.css);
+@import url(structure/sanctum.css);
+@import url(structure/secretlair.css);
+@import url(structure/wizard.css);
