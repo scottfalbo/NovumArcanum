@@ -2,10 +2,6 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// -------------------------------------*/
 
-#portal-container {
-    display: grid;
-}
-
 /* Mobile: 320-480 */
 @media screen and (max-width: 480px) {
     #portal-container {
@@ -91,4 +87,47 @@
         grid-template-columns: 1fr;
         grid-template-rows: min-content, min-content;
     }
+}
+
+/* container-one */
+#portal-container > .container-one > div:nth-child(1) {
+    grid-column: 1/2; 
+    grid-row: 1/2;
+}
+
+#portal-container > .container-one > div:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#portal-container > .container-one > div:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+/*  container-two */
+#portal-container > .container-two > div:nth-child(1) {
+    grid-column: 1/2; 
+    grid-row: 1/2;
+}
+
+#portal-container > .container-two > div:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#portal-container > .container-two > div:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+/* container-three */
+#portal-container > .container-three > div:nth-child(1) {
+    grid-column: 1/2; 
+    grid-row: 1/2;
+}
+
+#portal-container > .container-three > div:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/3;
 }

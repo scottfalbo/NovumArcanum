@@ -42,3 +42,9 @@ html {
     min-height: 100%;
 }
 
+.format-paragraph
+{
+    text-align: left;
+    line-height: 1.2em;
+    padding: 15px;
+}
