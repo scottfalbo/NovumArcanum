@@ -14,4 +14,8 @@
     <ProjectReference Include="..\Mechanisms\Mechanisms.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\css\style\" />
+  </ItemGroup>
+
 </Project>
