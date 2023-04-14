@@ -1,4 +1,7 @@
-using Microsoft.AspNetCore.Mvc;
+///---------------------------------------
+/// Novum Arcanum: Studio Arcanum Seattle
+/// --------------------------------------
+
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace NovumArcanum.Pages

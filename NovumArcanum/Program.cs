@@ -1,3 +1,7 @@
+///---------------------------------------
+/// Novum Arcanum: Studio Arcanum Seattle
+/// --------------------------------------
+
 using MechanistTower.Clients;
 using MechanistTower.Configuration;
 using Microsoft.Azure.Cosmos;

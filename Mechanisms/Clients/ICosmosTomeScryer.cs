@@ -1,4 +1,8 @@
-﻿using Microsoft.Azure.Cosmos;
+﻿///---------------------------------------
+/// Novum Arcanum: Studio Arcanum Seattle
+/// --------------------------------------
+
+using Microsoft.Azure.Cosmos;
 
 namespace MechanistTower.Clients
 {

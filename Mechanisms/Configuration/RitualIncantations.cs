@@ -1,4 +1,8 @@
-﻿namespace MechanistTower.Configuration
+﻿///---------------------------------------
+/// Novum Arcanum: Studio Arcanum Seattle
+/// --------------------------------------
+
+namespace MechanistTower.Configuration
 {
     public class RitualIncantations : IRitualIncantations
     {
