@@ -8,3 +8,7 @@
 @import url(structure/sanctum.css);
 @import url(structure/secretlair.css);
 @import url(structure/wizard.css);
+
+.container-one, .container-three, .container-three {
+    display: grid;
+}

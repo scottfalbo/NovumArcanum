@@ -1,3 +1,94 @@
 ﻿/*/----------------------------------------
 /// Novum Arcanum: Studio Arcanum Seattle
 /// -------------------------------------*/
+
+#portal-container {
+    display: grid;
+}
+
+/* Mobile: 320-480 */
+@media screen and (max-width: 480px) {
+    #portal-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, min-content);
+    }
+    
+    #portal-container > .container-one {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px, min-content, min-content;
+    }
+
+    #portal-container > .container-two {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content, 30px, min-content;
+    }
+
+    #portal-container > .container-three {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content, min-content;
+    }
+}
+
+/* Tablet: 481-991 */
+@media screen and (min-width: 481px) and (max-width: 991px) {
+    #portal-container {
+        grid-template-columns: 40%, 60%;
+        grid-template-rows: repeat(2, min-content);
+    }
+    
+    #portal-container > .container-one {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px, min-content, min-content;
+    }
+
+    #portal-container > .container-two {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content, 30px, min-content;
+    }
+
+    #portal-container > .container-three {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content, min-content;
+    }
+}
+
+/* Desktop: 992+ */
+@media screen and (min-width: 992px) {
+    #portal-container {
+        grid-template-columns: repeat(3, 33%);
+        grid-template-rows: 1fr;
+    }
+    
+    #portal-container > .container-one {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px, min-content, min-content;
+    }
+
+    #portal-container > .container-two {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content, 30px, min-content;
+    }
+
+    #portal-container > .container-three {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content, min-content;
+    }
+}
