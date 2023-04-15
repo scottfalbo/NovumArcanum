@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Azure.Cosmos;
 using Microsoft.EntityFrameworkCore;
 using NovumArcanum.Aegis;
+using NovumArcanum.Aegis.Sentinals;
 using System;
 
 namespace NovumArcanum
@@ -49,6 +50,8 @@ namespace NovumArcanum
             builder.Services.AddRazorPages();
 
             builder.Services.AddSingleton<IRitualIncantations>(_ritualIncantations);
+            builder.Services.AddTransient<IGaurdianSentinal, GaurdianSentinal>();
+            builder.Services.AddTransient<IScribeSentinal, ScribeSentinal>();
         }
 
         private static void ConfigureAppSettings(WebApplication app)
