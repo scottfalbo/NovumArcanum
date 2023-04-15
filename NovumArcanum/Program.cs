@@ -4,7 +4,11 @@
 
 using MechanistTower.Clients;
 using MechanistTower.Configuration;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Azure.Cosmos;
+using Microsoft.EntityFrameworkCore;
+using NovumArcanum.Aegis;
+using System;
 
 namespace NovumArcanum
 {
@@ -29,6 +33,19 @@ namespace NovumArcanum
 
         private static void ConfigureServices(WebApplicationBuilder builder)
         {
+            builder.Services.AddDbContext<ArcanumAegisDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+                {
+                    options.SignIn.RequireConfirmedAccount = false;
+                    options.Password.RequireDigit = false;
+                    options.Password.RequiredLength = 6;
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireUppercase = false;
+                    options.Password.RequireLowercase = false;
+                })
+                .AddEntityFrameworkStores<ArcanumAegisDbContext>();
+
             builder.Services.AddRazorPages();
 
             builder.Services.AddSingleton<IRitualIncantations>(_ritualIncantations);
@@ -48,6 +65,7 @@ namespace NovumArcanum
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapRazorPages();
