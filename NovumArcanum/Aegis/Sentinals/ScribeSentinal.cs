@@ -18,6 +18,9 @@ namespace NovumArcanum.Aegis.Sentinals
             _userManager = userManager;
         }
 
+        /// <summary>
+        /// Register a new user
+        /// </summary>
         public async Task<SanctumCorporeal> Register(SanctumInitiate sanctumInitiate, ModelStateDictionary modelState)
         {
             var user = new IdentityUser()
@@ -31,7 +34,8 @@ namespace NovumArcanum.Aegis.Sentinals
                 Id = user.Id,
                 UserName = user.UserName,
                 Email = user.Email,
-                Roles = WizardRole.DefaultRoles
+                Roles = WizardRole.DefaultRoles,
+                IsRegistered = false
             };
 
             var result = await _userManager.CreateAsync(user, sanctumInitiate.Password);
@@ -39,13 +43,10 @@ namespace NovumArcanum.Aegis.Sentinals
             if (result.Succeeded)
             {
                 await _userManager.AddToRolesAsync(user, WizardRole.DefaultRoles);
-
                 sanctumCorporeal.IsRegistered = true;
 
                 return sanctumCorporeal;
             }
-
-            sanctumCorporeal.IsRegistered = false;
 
             foreach (var error in result.Errors)
             {
@@ -55,18 +56,27 @@ namespace NovumArcanum.Aegis.Sentinals
             return sanctumCorporeal;
         }
 
+        /// <summary>
+        /// Update user password.
+        /// </summary>
         public async Task<IdentityResult> UpdatePassword(string userId, string currentPassword, string newPassword)
         {
             var user = await _userManager.FindByIdAsync(userId);
             return await _userManager.ChangePasswordAsync(user, currentPassword, newPassword);
         }
 
+        /// <summary>
+        /// Update user email.
+        /// </summary>
         public async Task<IdentityResult> UpdateUserEmail(string userId, string newEmail)
         {
             var user = await _userManager.FindByIdAsync(userId);
             return await _userManager.SetEmailAsync(user, newEmail);
         }
 
+        /// <summary>
+        /// Update user name.
+        /// </summary>
         public async Task<IdentityResult> UpdateUserName(string userId, string newName)
         {
             var user = await _userManager.FindByIdAsync(userId);
