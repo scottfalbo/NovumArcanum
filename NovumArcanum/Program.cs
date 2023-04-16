@@ -2,6 +2,8 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
 
+using Mechanisms.Processors;
+using Mechanisms.Repository;
 using MechanistTower.Clients;
 using MechanistTower.Configuration;
 using Microsoft.AspNetCore.Identity;
@@ -53,6 +55,8 @@ namespace NovumArcanum
             builder.Services.AddSingleton<IRitualIncantations>(_ritualIncantations);
             builder.Services.AddTransient<IGaurdianSentinal, GaurdianSentinal>();
             builder.Services.AddTransient<IScribeSentinal, ScribeSentinal>();
+            builder.Services.AddTransient<IInscriptioProcessor, InscriptioProcessor>();
+            builder.Services.AddTransient<IInscriptioRepository, InscriptioRepository>();
         }
 
         private static void ConfigureAppSettings(WebApplication app)
