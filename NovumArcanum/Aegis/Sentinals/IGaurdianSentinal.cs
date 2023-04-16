@@ -8,6 +8,6 @@ namespace NovumArcanum.Aegis.Sentinals
 {
     public interface IGaurdianSentinal
     {
-        Task<SanctumAdeptus> Authenticate(string userName, string password);
+        Task<SanctumCorporeal> Authenticate(string userName, string password);
     }
 }

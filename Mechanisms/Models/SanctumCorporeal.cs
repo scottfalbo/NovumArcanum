@@ -4,9 +4,11 @@
 
 namespace Mechanisms.Models
 {
-    public class SanctumAdeptus
+    public class SanctumCorporeal
+
     {
         public string Id { get; set; }
-        public string Name { get; set; }
+        public string UserName { get; set; }
+        public IList<string> Roles { get; set; }
     }
 }

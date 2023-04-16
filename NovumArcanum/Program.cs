@@ -45,6 +45,7 @@ namespace NovumArcanum
                     options.Password.RequireUppercase = false;
                     options.Password.RequireLowercase = false;
                 })
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ArcanumAegisDbContext>();
 
             builder.Services.AddRazorPages();

@@ -10,7 +10,7 @@ namespace NovumArcanum.Aegis.Sentinals
 {
     public class ScribeSentinal : IScribeSentinal
     {
-        public Task<SanctumAdeptus> Register(SanctumInitiate sanctumInitiate, ModelStateDictionary modelState)
+        public Task<SanctumCorporeal> Register(SanctumInitiate sanctumInitiate, ModelStateDictionary modelState)
         {
             throw new NotImplementedException();
         }

@@ -10,7 +10,7 @@ namespace NovumArcanum.Aegis.Sentinals
 {
     public interface IScribeSentinal
     {
-        Task<SanctumAdeptus> Register(SanctumInitiate sanctumInitiate, ModelStateDictionary modelState);
+        Task<SanctumCorporeal> Register(SanctumInitiate sanctumInitiate, ModelStateDictionary modelState);
         Task<IdentityResult> UpdatePassword(string userId, string currentPassword, string newPassword);
         Task<IdentityResult> UpdateUserName(string userId, string newName);
         Task<IdentityResult> UpdateUserEmail(string userId, string newEmail);
