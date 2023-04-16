@@ -27,6 +27,8 @@ namespace Mechanisms.Models.Constants
         /// </summary>
         public const string MagusAdeptus = nameof(MagusAdeptus);
 
+        public static List<string> DefaultRoles => new() { nameof(MagusAdeptus) };
+
         public static class Id
         {
             public const string MagusArchitect = $"RoleId:{nameof(MagusArchitect)}";

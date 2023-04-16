@@ -12,5 +12,10 @@ namespace Mechanisms.Models
         public IList<string> Roles { get; set; }
         public bool IsRegistered { get; set; }
         public List<string> RegistrationErrors { get; set; }
+
+        public SanctumCorporeal()
+        {
+            RegistrationErrors = new();
+        }
     }
 }
