@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovumArcanum", "NovumArcanum\NovumArcanum.csproj", "{D328981B-9BC7-4D46-B76B-E1B4EF331F00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovumArcanum", "NovumArcanum\NovumArcanum.csproj", "{D328981B-9BC7-4D46-B76B-E1B4EF331F00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mechanisms", "Mechanisms\Mechanisms.csproj", "{4EEAA833-BFD5-4F5C-8FF6-BDFBEA7EF95E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mechanisms", "Mechanisms\Mechanisms.csproj", "{4EEAA833-BFD5-4F5C-8FF6-BDFBEA7EF95E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

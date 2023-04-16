@@ -1,0 +1,27 @@
+﻿@*///---------------------------------------
+/// Novum Arcanum: Studio Arcanum Seattle
+/// --------------------------------------*@
+
+
+@page
+@model NovumArcanum.Pages.Admin.InscriptioModel
+@{
+    ViewData["Title"] = "Wizard Inscriptio";
+}
+
+<div>
+    <form asp-page-handler="Register" method="post">
+        <div>
+            <input type="text" name="username" placeholder="username" required />
+        </div>
+        <div>
+            <input type="text" name="email" placeholder="email" required />
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="password" required />
+        </div>
+        <div>
+            <input type="submit" value="Create Account" />
+        </div>
+    </form>
+</div>
