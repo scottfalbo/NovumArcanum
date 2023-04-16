@@ -1,12 +1,22 @@
-﻿///---------------------------------------
+﻿
+///---------------------------------------
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
+
+using System.ComponentModel.DataAnnotations;
 
 namespace Mechanisms.Models
 {
     public class SanctumInitiate
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
+        [Required]
+        public string UserName { get; set; }
+
+        [Required]
+        public string Password { get; set; }
+
+        public string Email { get; set; }
+
+        public IList<string> Roles { get; set; }
     }
 }

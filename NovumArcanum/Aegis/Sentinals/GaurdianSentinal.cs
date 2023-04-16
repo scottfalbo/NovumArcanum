@@ -25,13 +25,13 @@ namespace NovumArcanum.Aegis.Sentinals
             {
                 var user = await _userManager.FindByNameAsync(userName);
 
-                var temp = await _userManager.GetRolesAsync(user);
-
                 return new SanctumCorporeal
                 {
                     Id = user.Id,
                     UserName = user.UserName,
+                    Email = user.Email,
                     Roles = await _userManager.GetRolesAsync(user),
+                    IsRegistered = true
                 };
             }
             return null;
