@@ -26,9 +26,10 @@ namespace Mechanisms.Repository
 
         public Task InscribeWizard(Wizard wizard)
         {
-            var characterSheetStorageContract = _mapper.Map<CharacterSheetStorageContract>(characterSheet);
-            var result = await _container.CreateItemAsync(characterSheetStorageContract);
-            Console.Write(result);
+            //var characterSheetStorageContract = _mapper.Map<CharacterSheetStorageContract>(characterSheet);
+            //var result = await _container.CreateItemAsync(characterSheetStorageContract);
+            //Console.Write(result);
+            throw new NotImplementedException();
         }
 
         public Task RebirthWizard(Wizard wizard)

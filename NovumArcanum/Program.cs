@@ -2,6 +2,7 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
 
+using Mechanisms.Mapper;
 using Mechanisms.Processors;
 using Mechanisms.Repository;
 using MechanistTower.Clients;
@@ -51,6 +52,7 @@ namespace NovumArcanum
                 .AddEntityFrameworkStores<ArcanumAegisDbContext>();
 
             builder.Services.AddRazorPages();
+            builder.Services.AddAutoMapper(typeof(MapperProfile));
 
             builder.Services.AddSingleton<IRitualIncantations>(_ritualIncantations);
             builder.Services.AddTransient<IGaurdianSentinal, GaurdianSentinal>();
