@@ -3,6 +3,7 @@
 /// --------------------------------------
 
 using Mechanisms.Models;
+using Mechanisms.Processors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using NovumArcanum.Aegis.Sentinals;
@@ -12,10 +13,12 @@ namespace NovumArcanum.Pages.Admin
 {
     public class InscriptioModel : PageModel
     {
+        private readonly IInscriptioProcessor _inscriptioProcessor;
         private readonly IScribeSentinal _scribeSentinal;
 
-        public InscriptioModel(IScribeSentinal scribeSentinal)
+        public InscriptioModel(IScribeSentinal scribeSentinal, IInscriptioProcessor inscriptioProcessor)
         {
+            _inscriptioProcessor = inscriptioProcessor;
             _scribeSentinal = scribeSentinal;
         }
 
@@ -36,10 +39,9 @@ namespace NovumArcanum.Pages.Admin
 
             var user = await _scribeSentinal.Register(newUser, ModelState);
 
-            // TODO: create user in cosmos
-
             if (user.IsRegistered)
             {
+                await _inscriptioProcessor.ProcessCorporeal(user);
                 return Redirect("/Index");
             }
             else

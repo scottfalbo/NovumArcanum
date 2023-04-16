@@ -16,9 +16,12 @@ namespace Mechanisms.Processors
             _inscriptioRepository = inscriptioRepository;
         }
 
-        public Task<Wizard> ProcessCorporeal(SanctumCorporeal sanctumCorporeal)
+        public async Task<Wizard> ProcessCorporeal(SanctumCorporeal sanctumCorporeal)
         {
-            throw new NotImplementedException();
+            var wizard = new Wizard(sanctumCorporeal.Id, sanctumCorporeal.UserName, sanctumCorporeal.Email, sanctumCorporeal.Roles);
+            var result = await _inscriptioRepository.InscribeWizard(wizard);
+
+            return wizard;
         }
     }
 }

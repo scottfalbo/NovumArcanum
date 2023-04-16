@@ -17,7 +17,9 @@ namespace Mechanisms.Mapper
 
         public void WizardStorageMapping()
         {
-            CreateMap<Wizard, WizardInfernalContract>();
+            CreateMap<Wizard, WizardInfernalContract>()
+                .ForMember(dest => dest.PartitionKey, opt => opt.MapFrom(src => src.Id));
+
             CreateMap<WizardInfernalContract, Wizard>();
         }
     }
