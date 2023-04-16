@@ -9,6 +9,6 @@
 @import url(structure/secretlair.css);
 @import url(structure/wizard.css);
 
-.page-container, .container-one, .container-three, .container-three {
+.page-container, .container-one, .container-two, .container-three {
     display: grid;
 }
