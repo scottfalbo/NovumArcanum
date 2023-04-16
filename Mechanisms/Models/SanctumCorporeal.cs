@@ -11,5 +11,6 @@ namespace Mechanisms.Models
         public string Email { get; set; }
         public IList<string> Roles { get; set; }
         public bool IsRegistered { get; set; }
+        public List<string> RegistrationErrors { get; set; }
     }
 }

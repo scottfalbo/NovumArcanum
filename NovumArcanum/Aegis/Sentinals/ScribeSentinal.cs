@@ -26,38 +26,50 @@ namespace NovumArcanum.Aegis.Sentinals
                 Email = sanctumInitiate.Email,
             };
 
+            var sanctumCorporeal = new SanctumCorporeal();
+
             var result = await _userManager.CreateAsync(user, sanctumInitiate.Password);
 
             if (result.Succeeded)
             {
                 await _userManager.AddToRolesAsync(user, new List<string>() { WizardRole.MagusAdeptus });
 
-                return new SanctumCorporeal
-                {
-                    Id = user.Id,
-                    UserName = user.UserName,
-                    Email = user.Email,
-                    Roles = new List<string>() { WizardRole.MagusAdeptus },
-                    IsRegistered = true
-                };
+                sanctumCorporeal.Id = user.Id;
+                sanctumCorporeal.UserName = user.UserName;
+                sanctumCorporeal.Email = user.Email;
+                sanctumCorporeal.Roles = new List<string>() { WizardRole.MagusAdeptus };
+                sanctumCorporeal.IsRegistered = true;
+
+                return sanctumCorporeal;
             }
 
-            return null;
+            sanctumCorporeal.IsRegistered = false;
+
+            foreach (var error in result.Errors)
+            {
+                sanctumCorporeal.RegistrationErrors.Add(error.Description);
+            }
+
+            return sanctumCorporeal;
         }
 
-        public Task<IdentityResult> UpdatePassword(string userId, string currentPassword, string newPassword)
+        public async Task<IdentityResult> UpdatePassword(string userId, string currentPassword, string newPassword)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.FindByIdAsync(userId);
+            return await _userManager.ChangePasswordAsync(user, currentPassword, newPassword);
         }
 
-        public Task<IdentityResult> UpdateUserEmail(string userId, string newEmail)
+        public async Task<IdentityResult> UpdateUserEmail(string userId, string newEmail)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.FindByIdAsync(userId);
+            return await _userManager.SetEmailAsync(user, newEmail);
         }
 
-        public Task<IdentityResult> UpdateUserName(string userId, string newName)
+        public async Task<IdentityResult> UpdateUserName(string userId, string newName)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.FindByIdAsync(userId);
+            user.UserName = newName;
+            return await _userManager.UpdateAsync(user);
         }
     }
 }
