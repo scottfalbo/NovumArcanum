@@ -26,18 +26,20 @@ namespace NovumArcanum.Aegis.Sentinals
                 Email = sanctumInitiate.Email,
             };
 
-            var sanctumCorporeal = new SanctumCorporeal();
+            var sanctumCorporeal = new SanctumCorporeal()
+            {
+                Id = user.Id,
+                UserName = user.UserName,
+                Email = user.Email,
+                Roles = WizardRole.DefaultRoles
+            };
 
             var result = await _userManager.CreateAsync(user, sanctumInitiate.Password);
 
             if (result.Succeeded)
             {
-                await _userManager.AddToRolesAsync(user, new List<string>() { WizardRole.MagusAdeptus });
+                await _userManager.AddToRolesAsync(user, WizardRole.DefaultRoles);
 
-                sanctumCorporeal.Id = user.Id;
-                sanctumCorporeal.UserName = user.UserName;
-                sanctumCorporeal.Email = user.Email;
-                sanctumCorporeal.Roles = new List<string>() { WizardRole.MagusAdeptus };
                 sanctumCorporeal.IsRegistered = true;
 
                 return sanctumCorporeal;
