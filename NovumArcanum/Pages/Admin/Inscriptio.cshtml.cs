@@ -36,6 +36,8 @@ namespace NovumArcanum.Pages.Admin
 
             var user = await _scribeSentinal.Register(newUser, ModelState);
 
+            // TODO: create user in cosmos
+
             if (user.IsRegistered)
             {
                 return Redirect("/Index");

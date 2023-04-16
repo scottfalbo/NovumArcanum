@@ -9,9 +9,9 @@ namespace Mechanisms.Processors
 {
     public class InscriptioProcessor : IInscriptioProcessor
     {
-        private readonly IInscriptioRepository _inscriptioRepository;
+        private readonly IWizardRepository _inscriptioRepository;
 
-        public InscriptioProcessor(IInscriptioRepository inscriptioRepository)
+        public InscriptioProcessor(IWizardRepository inscriptioRepository)
         {
             _inscriptioRepository = inscriptioRepository;
         }
