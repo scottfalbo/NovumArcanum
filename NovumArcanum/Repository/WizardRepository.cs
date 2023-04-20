@@ -35,11 +35,6 @@ namespace NovumArcanum.Repository
             var wizardInfernalContract = _mapper.Map<WizardInfernalContract>(wizard);
             var result = await _container.CreateItemAsync(wizardInfernalContract);
             return result.StatusCode == HttpStatusCode.OK;
-
-            //var characterSheetStorageContract = _mapper.Map<CharacterSheetStorageContract>(characterSheet);
-            //var result = await _container.CreateItemAsync(characterSheetStorageContract);
-            //Console.Write(result);
-            throw new NotImplementedException();
         }
 
         public Task RebirthWizard(Wizard wizard)
@@ -48,6 +43,11 @@ namespace NovumArcanum.Repository
         }
 
         public Task SummonWizard(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<Wizard>> SummonAllWizards()
         {
             throw new NotImplementedException();
         }

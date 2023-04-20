@@ -58,6 +58,7 @@ namespace NovumArcanum
             builder.Services.AddTransient<IScribeSentinal, ScribeSentinal>();
             builder.Services.AddTransient<IInscriptioProcessor, InscriptioProcessor>();
             builder.Services.AddTransient<IWizardRepository, WizardRepository>();
+            builder.Services.AddTransient<ISecretLairProcessor, SecretLairProcessor>();
         }
 
         private static void ConfigureAppSettings(WebApplication app)
