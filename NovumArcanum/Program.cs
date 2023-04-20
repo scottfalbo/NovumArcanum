@@ -2,11 +2,11 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
 
-using Mechanisms.Mapper;
-using Mechanisms.Processors;
-using Mechanisms.Repository;
-using MechanistTower.Clients;
-using MechanistTower.Configuration;
+using NovumArcanum.Mapper;
+using NovumArcanum.Processors;
+using NovumArcanum.Repository;
+using NovumArcanum.Clients;
+using NovumArcanum.Configuration;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Azure.Cosmos;
 using Microsoft.EntityFrameworkCore;

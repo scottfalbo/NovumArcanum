@@ -4,7 +4,7 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
 
-namespace Mechanisms.Models.StorageContracts
+namespace NovumArcanum.Models.StorageContracts
 {
     internal class WizardInfernalContract
     {

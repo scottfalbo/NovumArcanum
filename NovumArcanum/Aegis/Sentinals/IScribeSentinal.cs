@@ -2,7 +2,7 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
 
-using Mechanisms.Models;
+using NovumArcanum.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 

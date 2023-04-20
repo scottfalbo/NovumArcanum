@@ -2,7 +2,7 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
 
-namespace Mechanisms.Models.Constants
+namespace NovumArcanum.Models.Constants
 {
     public class Cosmos
     {

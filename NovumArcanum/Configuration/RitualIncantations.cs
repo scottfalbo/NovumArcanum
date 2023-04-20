@@ -2,7 +2,7 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
 
-namespace MechanistTower.Configuration
+namespace NovumArcanum.Configuration
 {
     public class RitualIncantations : IRitualIncantations
     {

@@ -3,14 +3,14 @@
 /// --------------------------------------
 
 using AutoMapper;
-using Mechanisms.Models;
-using Mechanisms.Models.Constants;
-using Mechanisms.Models.StorageContracts;
-using MechanistTower.Clients;
+using NovumArcanum.Models;
+using NovumArcanum.Models.Constants;
+using NovumArcanum.Models.StorageContracts;
+using NovumArcanum.Clients;
 using Microsoft.Azure.Cosmos;
 using System.Net;
 
-namespace Mechanisms.Repository
+namespace NovumArcanum.Repository
 {
     public class WizardRepository : IWizardRepository
     {

@@ -2,12 +2,9 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
 
-using Microsoft.Azure.Cosmos;
-
-namespace NovumArcanum.Clients
+namespace NovumArcanum.Processors
 {
-    public interface ICosmosTomeScryer
+    public class SecretLairProcessor
     {
-        CosmosClient Scryer();
     }
 }

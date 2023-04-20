@@ -4,7 +4,7 @@
 
 using Microsoft.Azure.Cosmos;
 
-namespace MechanistTower.Clients
+namespace NovumArcanum.Clients
 {
     public class CosmosTomeScryer : ICosmosTomeScryer
     {

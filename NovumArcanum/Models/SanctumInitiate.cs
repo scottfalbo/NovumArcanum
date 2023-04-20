@@ -4,7 +4,7 @@
 
 using System.ComponentModel.DataAnnotations;
 
-namespace Mechanisms.Models
+namespace NovumArcanum.Models
 {
     public class SanctumInitiate
     {

@@ -3,7 +3,7 @@
 /// --------------------------------------
 
 using AutoMapper;
-using Mechanisms.Mapper;
+using NovumArcanum.Mapper;
 
 namespace ArcanumTests.Mapping
 {

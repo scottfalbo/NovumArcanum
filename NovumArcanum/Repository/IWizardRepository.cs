@@ -2,9 +2,9 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
 
-using Mechanisms.Models;
+using NovumArcanum.Models;
 
-namespace Mechanisms.Repository
+namespace NovumArcanum.Repository
 {
     public interface IWizardRepository
     {

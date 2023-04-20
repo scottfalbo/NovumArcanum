@@ -2,7 +2,7 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
 
-namespace Mechanisms.Models
+namespace NovumArcanum.Models
 {
     public class SanctumCorporeal
     {

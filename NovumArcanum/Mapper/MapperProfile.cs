@@ -3,10 +3,10 @@
 /// --------------------------------------
 
 using AutoMapper;
-using Mechanisms.Models;
-using Mechanisms.Models.StorageContracts;
+using NovumArcanum.Models;
+using NovumArcanum.Models.StorageContracts;
 
-namespace Mechanisms.Mapper
+namespace NovumArcanum.Mapper
 {
     public class MapperProfile : Profile
     {

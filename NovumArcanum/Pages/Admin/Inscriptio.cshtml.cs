@@ -2,8 +2,8 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
 
-using Mechanisms.Models;
-using Mechanisms.Processors;
+using NovumArcanum.Models;
+using NovumArcanum.Processors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using NovumArcanum.Aegis.Sentinals;

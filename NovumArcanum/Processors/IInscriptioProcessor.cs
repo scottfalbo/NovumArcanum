@@ -2,9 +2,9 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
 
-using Mechanisms.Models;
+using NovumArcanum.Models;
 
-namespace Mechanisms.Processors
+namespace NovumArcanum.Processors
 {
     public interface IInscriptioProcessor
     {
