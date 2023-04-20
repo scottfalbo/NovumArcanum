@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mechanisms\Mechanisms.csproj" />
     <ProjectReference Include="..\NovumArcanum\NovumArcanum.csproj" />
   </ItemGroup>
 
