@@ -19,7 +19,7 @@ namespace NovumArcanum.Aegis.Sentinals
         }
 
         /// <summary>
-        /// Logs user in. 
+        /// Logs user in.
         /// </summary>
         public async Task<SanctumCorporeal> Authenticate(string userName, string password)
         {

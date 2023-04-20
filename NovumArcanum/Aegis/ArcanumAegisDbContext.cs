@@ -2,10 +2,10 @@
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
 
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Mechanisms.Models.Constants;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace NovumArcanum.Aegis
 {

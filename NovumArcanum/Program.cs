@@ -12,7 +12,6 @@ using Microsoft.Azure.Cosmos;
 using Microsoft.EntityFrameworkCore;
 using NovumArcanum.Aegis;
 using NovumArcanum.Aegis.Sentinals;
-using System;
 
 namespace NovumArcanum
 {

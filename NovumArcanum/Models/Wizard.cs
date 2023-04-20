@@ -1,6 +1,4 @@
-﻿
-using Mechanisms.Models.Constants;
-///---------------------------------------
+﻿///---------------------------------------
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
 namespace Mechanisms.Models
@@ -20,7 +18,8 @@ namespace Mechanisms.Models
         public List<Social> Social { get; set; }
         public List<GalleryImage> Gallery { get; set; }
 
-        public Wizard() { }
+        public Wizard()
+        { }
 
         public Wizard(string id, string userName, string email, IList<string> roles)
         {

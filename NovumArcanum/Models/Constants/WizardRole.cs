@@ -8,7 +8,7 @@ namespace Mechanisms.Models.Constants
     {
         /// <summary>
         /// Full permissions in all areas of the site for admin purposes.
-        /// Will not be visable or assignable as a role in the admin panel.
+        /// Will not be visible or assignable as a role in the admin panel.
         /// </summary>
         public const string MagusArchitect = nameof(MagusArchitect);
 

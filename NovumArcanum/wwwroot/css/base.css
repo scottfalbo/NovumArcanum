@@ -4,17 +4,14 @@
 
 /* Mobile: 320-480 */
 @media screen and (max-width: 480px) {
-
 }
 
 /* Tablet: 481-991 */
 @media screen and (min-width: 481px) and (max-width: 991px) {
-
 }
 
 /* Desktop: 992+ */
 @media screen and (min-width: 992px) {
-
 }
 
 /*  temporary to save my eyes! */
@@ -42,8 +39,7 @@ html {
     min-height: 100%;
 }
 
-.format-paragraph
-{
+.format-paragraph {
     text-align: left;
     line-height: 1.2em;
     padding: 15px;

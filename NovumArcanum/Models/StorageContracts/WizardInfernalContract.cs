@@ -1,5 +1,5 @@
-﻿
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+
 ///---------------------------------------
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
