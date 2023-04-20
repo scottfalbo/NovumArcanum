@@ -29,9 +29,6 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/TheSanctum">The Sanctum</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Ingressus">Login</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -43,9 +40,16 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer">
         <div class="container">
-            &copy; 2023 - NovumArcanum - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-page="/Admin/Inscriptio">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-page="/Admin/Ingressus">Login</a>
+                </li>
+            </ul>
         </div>
     </footer>
 
