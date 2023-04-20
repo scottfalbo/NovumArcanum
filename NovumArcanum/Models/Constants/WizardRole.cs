@@ -36,5 +36,16 @@ namespace Mechanisms.Models.Constants
             public const string MagusMagister = $"RoleId:{nameof(MagusMagister)}";
             public const string MagusAdeptus = $"RoleId:{nameof(MagusAdeptus)}";
         }
+
+        public static List<string> GetRoles()
+        {
+            return new List<string>()
+            {
+                MagusArchitect,
+                MagusPrimus,
+                MagusMagister,
+                MagusAdeptus
+            };
+        }
     }
 }
