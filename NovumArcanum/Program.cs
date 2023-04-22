@@ -60,6 +60,7 @@ namespace NovumArcanum
             builder.Services.AddTransient<IInscriptioProcessor, InscriptioProcessor>();
             builder.Services.AddTransient<IWizardRepository, WizardRepository>();
             builder.Services.AddTransient<ISecretLairProcessor, SecretLairProcessor>();
+            builder.Services.AddTransient<IWizardProcessor, WizardProcessor>();
         }
 
         private static void ConfigureAppSettings(WebApplication app)
