@@ -11,10 +11,12 @@ namespace NovumArcanum.Aegis.Sentinals
 {
     public class ScribeSentinal : IScribeSentinal
     {
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UserManager<IdentityUser> _userManager;
 
-        public ScribeSentinal(UserManager<IdentityUser> userManager)
+        public ScribeSentinal(RoleManager<IdentityRole> roleManager, UserManager<IdentityUser> userManager)
         {
+            _roleManager = roleManager;
             _userManager = userManager;
         }
 

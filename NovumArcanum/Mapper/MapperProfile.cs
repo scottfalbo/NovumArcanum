@@ -4,6 +4,7 @@
 
 using AutoMapper;
 using NovumArcanum.Models;
+using NovumArcanum.Models.Pages;
 using NovumArcanum.Models.StorageContracts;
 
 namespace NovumArcanum.Mapper
@@ -12,7 +13,14 @@ namespace NovumArcanum.Mapper
     {
         public MapperProfile()
         {
+            SecretLairMapping();
             WizardStorageMapping();
+        }
+
+        public void SecretLairMapping()
+        {
+            CreateMap<Wizard, WizardSecretLairDTO>()
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.FirstName));
         }
 
         public void WizardStorageMapping()

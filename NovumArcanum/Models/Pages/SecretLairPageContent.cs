@@ -1,8 +1,12 @@
-﻿namespace NovumArcanum.Models.Pages
+﻿///---------------------------------------
+/// Novum Arcanum: Studio Arcanum Seattle
+/// --------------------------------------
+
+namespace NovumArcanum.Models.Pages
 {
     public class SecretLairPageContent
     {
-        public List<Wizard> Wizards { get; set; }
+        public List<WizardSecretLairDTO> Wizards { get; set; }
         public List<string> WizardRoles { get; set; }
     }
 }

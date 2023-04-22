@@ -14,7 +14,7 @@ namespace NovumArcanum.Repository
 
         Task DestroyWizard(string id);
 
-        Task RebirthWizard(Wizard wizard);
+        Task ReCombobulateWizard(Wizard wizard);
 
         Task<List<Wizard>> SummonAllWizards();
     }

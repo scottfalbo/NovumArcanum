@@ -3,13 +3,25 @@
 /// --------------------------------------
 
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using NovumArcanum.Models.Pages;
+using NovumArcanum.Processors;
 
 namespace NovumArcanum.Pages.Admin
 {
     public class SecretLairModel : PageModel
     {
-        public void OnGet()
+        private readonly ISecretLairProcessor _secretLairProcessor;
+
+        public SecretLairPageContent SecretLairPageContent { get; set; }
+
+        public SecretLairModel(ISecretLairProcessor secretLairProcessor)
         {
+            _secretLairProcessor = secretLairProcessor;
+        }
+
+        public async void OnGet()
+        {
+            SecretLairPageContent = await _secretLairProcessor.GetSeceretLair();
         }
     }
 }

@@ -37,7 +37,7 @@ namespace NovumArcanum.Repository
             return result.StatusCode == HttpStatusCode.OK;
         }
 
-        public Task RebirthWizard(Wizard wizard)
+        public Task ReCombobulateWizard(Wizard wizard)
         {
             throw new NotImplementedException();
         }
