@@ -10,5 +10,6 @@ namespace NovumArcanum.Models
         public string Url { get; set; }
         public string ThumbFileName { get; set; }
         public string ThumbUrl { get; set; }
+        public string AltText { get; set; }
     }
 }

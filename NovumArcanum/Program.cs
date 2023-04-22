@@ -12,6 +12,7 @@ using Microsoft.Azure.Cosmos;
 using Microsoft.EntityFrameworkCore;
 using NovumArcanum.Aegis;
 using NovumArcanum.Aegis.Sentinals;
+using NovumArcanum.Models;
 
 namespace NovumArcanum
 {
@@ -38,7 +39,7 @@ namespace NovumArcanum
         {
             builder.Services.AddDbContext<ArcanumAegisDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+            builder.Services.AddDefaultIdentity<SanctumTrustee>(options =>
                 {
                     options.SignIn.RequireConfirmedAccount = false;
                     options.Password.RequireDigit = false;

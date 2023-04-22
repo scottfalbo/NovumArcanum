@@ -14,7 +14,6 @@ namespace NovumArcanum.Models
         public string Intro { get; set; }
         public int DisplayOrder { get; set; }
         public bool IsDisplay { get; set; }
-        public List<string> Roles { get; set; }
         public ImageSource ImageSource { get; set; }
         public List<Social> Social { get; set; }
         public List<GalleryImage> Gallery { get; set; }
@@ -27,15 +26,14 @@ namespace NovumArcanum.Models
             Id = id;
             IdentityUserName = userName;
             Email = email;
-            Roles = roles.ToList();
 
             LoadDefaults();
         }
 
         private void LoadDefaults()
         {
-            FirstName = "New";
-            LastName = "User";
+            FirstName = "First Name";
+            LastName = "Last Name";
             Intro = "add short intro";
             DisplayOrder = 0;
             IsDisplay = false;

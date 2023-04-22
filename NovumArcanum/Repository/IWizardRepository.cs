@@ -10,12 +10,12 @@ namespace NovumArcanum.Repository
     {
         Task<bool> InscribeWizard(Wizard wizard);
 
-        Task SummonWizard(string id);
+        Task<Wizard> SummonWizard(string id);
 
-        Task DestroyWizard(string id);
+        Task<bool> DestroyWizard(string id);
 
-        Task ReCombobulateWizard(Wizard wizard);
+        Task<bool> ReCombobulateWizard(Wizard wizard);
 
-        Task<List<Wizard>> SummonAllWizards();
+        Task<IEnumerable<Wizard>> SummonAllWizards();
     }
 }

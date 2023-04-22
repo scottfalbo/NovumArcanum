@@ -12,9 +12,9 @@ namespace NovumArcanum.Aegis.Sentinals
     public class ScribeSentinal : IScribeSentinal
     {
         private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<SanctumTrustee> _userManager;
 
-        public ScribeSentinal(RoleManager<IdentityRole> roleManager, UserManager<IdentityUser> userManager)
+        public ScribeSentinal(RoleManager<IdentityRole> roleManager, UserManager<SanctumTrustee> userManager)
         {
             _roleManager = roleManager;
             _userManager = userManager;
@@ -25,7 +25,7 @@ namespace NovumArcanum.Aegis.Sentinals
         /// </summary>
         public async Task<SanctumCorporeal> Register(SanctumInitiate sanctumInitiate, ModelStateDictionary modelState)
         {
-            var user = new IdentityUser()
+            var user = new SanctumTrustee()
             {
                 UserName = sanctumInitiate.UserName,
                 Email = sanctumInitiate.Email,

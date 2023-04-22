@@ -1,0 +1,12 @@
+﻿@*///---------------------------------------
+/// Novum Arcanum: Studio Arcanum Seattle
+/// --------------------------------------*@
+
+@model NovumArcanum.Components.WizardMenuNav.ViewModel
+
+@foreach (var wizard in Model.Wizards)
+{
+    <li>
+        <a class="nav-link" asp-page="/Wizard" asp-route-wizardId="@wizard.Id">@wizard.Name</a>
+    </li>
+}

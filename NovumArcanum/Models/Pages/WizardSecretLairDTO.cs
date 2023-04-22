@@ -8,7 +8,6 @@ namespace NovumArcanum.Models.Pages
     {
         public string Id { get; set; }
         public string Name { get; set; }
-        public List<string> Roles { get; set; }
         public bool IsDisplay { get; set; }
         public int DisplayOrder { get; set; }
     }

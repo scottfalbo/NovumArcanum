@@ -6,10 +6,11 @@ using NovumArcanum.Models.Constants;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using NovumArcanum.Models;
 
 namespace NovumArcanum.Aegis
 {
-    public class ArcanumAegisDbContext : IdentityDbContext<IdentityUser, IdentityRole, string>
+    public class ArcanumAegisDbContext : IdentityDbContext<SanctumTrustee, IdentityRole, string>
     {
         private IConfiguration Configuration { get; }
 
@@ -28,10 +29,10 @@ namespace NovumArcanum.Aegis
             var adminPass = Configuration["SuperAdmin:Password"];
             var userId = Guid.NewGuid().ToString();
 
-            var hasher = new PasswordHasher<IdentityUser>();
+            var hasher = new PasswordHasher<SanctumTrustee>();
 
-            modelBuilder.Entity<IdentityUser>().HasData(
-                new IdentityUser
+            modelBuilder.Entity<SanctumTrustee>().HasData(
+                new SanctumTrustee
                 {
                     Id = userId,
                     UserName = adminName,

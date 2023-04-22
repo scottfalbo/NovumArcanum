@@ -9,10 +9,10 @@ namespace NovumArcanum.Aegis.Sentinals
 {
     public class GaurdianSentinal : IGaurdianSentinal
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<SanctumTrustee> _userManager;
+        private readonly SignInManager<SanctumTrustee> _signInManager;
 
-        public GaurdianSentinal(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signin)
+        public GaurdianSentinal(UserManager<SanctumTrustee> userManager, SignInManager<SanctumTrustee> signin)
         {
             _userManager = userManager;
             _signInManager = signin;

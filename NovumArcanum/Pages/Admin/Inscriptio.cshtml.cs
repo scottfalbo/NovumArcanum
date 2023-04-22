@@ -42,11 +42,11 @@ namespace NovumArcanum.Pages.Admin
             if (user.IsRegistered)
             {
                 await _inscriptioProcessor.ProcessCorporeal(user);
-                return Redirect("/Index");
+                return Redirect($"/Admin/Ingressus");
             }
             else
             {
-                return Redirect($"/Admin/Ingressus");
+                return Redirect($"/Admin/Inscriptio");
             }
         }
     }

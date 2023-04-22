@@ -3,13 +3,17 @@
 /// --------------------------------------
 
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using NovumArcanum.Models;
 
 namespace NovumArcanum.Pages
 {
     public class WizardModel : PageModel
     {
-        public void OnGet()
+        public Wizard Wizard { get; set; }
+
+        public void OnGet(string wizardId)
         {
+
         }
     }
 }

@@ -42,5 +42,12 @@ namespace NovumArcanum.Processors
 
             return secretLairPageContent;
         }
+
+        public async Task ToggleWizardDisplay(bool display, string wizardId)
+        {
+            var wizard = await _wizardRepository.SummonWizard(wizardId);
+            wizard.IsDisplay = display;
+            await _wizardRepository.ReCombobulateWizard(wizard);
+        }
     }
 }

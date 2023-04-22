@@ -25,7 +25,7 @@ namespace NovumArcanum.Repository
             _mapper = mapper;
         }
 
-        public Task DestroyWizard(string id)
+        public Task<bool> DestroyWizard(string id)
         {
             throw new NotImplementedException();
         }
@@ -37,19 +37,50 @@ namespace NovumArcanum.Repository
             return result.StatusCode == HttpStatusCode.OK;
         }
 
-        public Task ReCombobulateWizard(Wizard wizard)
+        public async Task<bool> ReCombobulateWizard(Wizard wizard)
         {
-            throw new NotImplementedException();
+            var wizardInfernalContract = _mapper.Map<WizardInfernalContract>(wizard);
+            var result = await _container.UpsertItemAsync(wizardInfernalContract);
+            return result.StatusCode == HttpStatusCode.OK;
         }
 
-        public Task SummonWizard(string id)
+        public async Task<Wizard> SummonWizard(string id)
         {
-            throw new NotImplementedException();
+            var wizard = new Wizard();
+            var query = $"SELECT * FROM c WHERE c.partitionKey = \"{id}\"";
+            var queryDefinition = new QueryDefinition(query);
+
+            using var resultIterator = _container.GetItemQueryIterator<Wizard>(queryDefinition);
+
+            while (resultIterator.HasMoreResults)
+            {
+                var feedResponse = await resultIterator.ReadNextAsync();
+
+                foreach (var summon in feedResponse)
+                {
+                    wizard = summon;
+                }
+            }
+
+            return wizard;
         }
 
-        public Task<List<Wizard>> SummonAllWizards()
+        public async Task<IEnumerable<Wizard>> SummonAllWizards()
         {
-            throw new NotImplementedException();
+            var wizards = new List<Wizard>();
+            using var resultIterator = _container.GetItemQueryIterator<Wizard>();
+
+            while (resultIterator.HasMoreResults)
+            {
+                var feedResponse = await resultIterator.ReadNextAsync();
+
+                foreach (var wizard in feedResponse)
+                {
+                    wizards.Add(wizard);
+                }
+            }
+
+            return wizards;
         }
     }
 }
