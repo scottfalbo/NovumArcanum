@@ -1,9 +1,10 @@
-﻿
-using NovumArcanum.Models.Pages;
-using NovumArcanum.Repository;
-///---------------------------------------
+﻿///---------------------------------------
 /// Novum Arcanum: Studio Arcanum Seattle
 /// --------------------------------------
+
+using NovumArcanum.Models.Pages;
+using NovumArcanum.Repository;
+
 namespace NovumArcanum.Processors
 {
     public class WizardProcessor : IWizardProcessor
@@ -15,9 +16,16 @@ namespace NovumArcanum.Processors
             _wizardRepository = wizardRepository;
         }
 
-        public Task<WizardPageContent> GetWizardPage(string id)
+        public async Task<WizardPageContent> GetWizardPage(string id)
         {
-            throw new NotImplementedException();
+            var wizard = await _wizardRepository.SummonWizard(id);
+
+            var wizardPageContent = new WizardPageContent
+            {
+                Wizard = wizard
+            };
+
+            return wizardPageContent;
         }
     }
 }
