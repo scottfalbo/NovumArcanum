@@ -23,9 +23,7 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Wizard">Wizard</a>
-                        </li>
+                        @await Component.InvokeAsync("WizardMenuNav")
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/TheSanctum">The Sanctum</a>
                         </li>

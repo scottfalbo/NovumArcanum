@@ -45,6 +45,7 @@ namespace NovumArcanum.Components
             {
                 Wizards = wizardsOrdered,
                 UserId = userId,
+                HasSanctumPermission = HasSanctumPermission
             };
 
             return View(viewModel);
@@ -54,6 +55,7 @@ namespace NovumArcanum.Components
         {
             public IEnumerable<WizardSecretLairDTO> Wizards { get; set; }
             public string UserId { get; set; }
+            public bool HasSanctumPermission { get; set; }
         }
     }
 }

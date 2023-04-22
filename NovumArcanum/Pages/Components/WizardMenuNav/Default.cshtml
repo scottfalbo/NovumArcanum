@@ -6,7 +6,10 @@
 
 @foreach (var wizard in Model.Wizards)
 {
-    <li>
-        <a class="nav-link" asp-page="/Wizard" asp-route-wizardId="@wizard.Id">@wizard.Name</a>
-    </li>
+    if (wizard.IsDisplay || Model.HasSanctumPermission && Model.UserId == wizard.Id)
+    {
+        <li>
+            <a class="nav-link" asp-page="/Wizard" asp-route-wizardId="@wizard.Id">@wizard.Name</a>
+        </li>
+    }
 }
